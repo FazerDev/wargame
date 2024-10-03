@@ -1,0 +1,630 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    /* Empêche les barres de défilement */
+}
+
+/* Styles pour les éléments de ressources */
+/* Barre des ressources */
+.resources-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(38, 38, 38, 0.95);
+    /* Couleur de fond légèrement plus opaque */
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0;
+    /* Plus d'espace vertical */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Ombre plus prononcée */
+    z-index: 1000;
+    border-bottom: 3px solid #4caf50;
+    /* Bordure verte plus épaisse */
+}
+
+/* Styles pour les éléments de ressources */
+.resource-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Espace plus grand entre l'image et le texte */
+    background-color: #44444477;
+    /* Couleur de fond pour un meilleur contraste */
+    padding: 1px 15px;
+    /* Plus d'espacement interne */
+    border-radius: 20px;
+    /* Arrondi plus prononcé */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    /* Ombre plus prononcée */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    /* Transition pour effet au survol */
+}
+
+.resource-item:hover {
+    transform: translateY(-5px);
+    /* Effet de survol : léger déplacement vers le haut */
+    background-color: #555;
+    /* Changement de couleur de fond au survol */
+}
+
+/* Styles pour les icônes de ressources */
+.resource-icon {
+    width: 35px;
+    /* Taille de l'icône ajustée */
+    height: 35px;
+    border-radius: 50%;
+    /* Les icônes seront circulaires */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    /* Ombre plus prononcée autour des icônes */
+}
+
+/* Texte de la ressource */
+.resource-value {
+    font-size: 15px;
+    /* Taille de police légèrement plus grande */
+    font-weight: bold;
+    color: #ff9800;
+    /* Couleur orange pour contraster avec le fond sombre */
+}
+
+
+/*Gestion des images de fond */
+.base-outer {
+    height: 2036px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 2036px
+}
+
+.base-background {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 50.294695481%;
+    position: absolute;
+    width: 50.294695481%
+}
+
+.base-background.one {
+    background-image: url("../images/background1.jpg");
+    left: 0;
+    top: 0
+}
+
+.base-background.two {
+    background-image: url("../images/background2.jpg");
+    right: 0;
+    top: 0
+}
+
+.base-background.three {
+    background-image: url("../images/background3.jpg");
+    bottom: 0;
+    left: 0
+}
+
+.base-background.four {
+    background-image: url("../images/background4.jpg");
+    bottom: 0;
+    right: 0
+}
+
+/*Fin Gestion des images de fond */
+
+
+/* Bouton deconnexion*/
+.logout-button {
+    position: fixed;
+    bottom: 15px;
+    left: 10px;
+    z-index: 1000;
+    /* S'assurer que le bouton est au-dessus des autres éléments */
+}
+
+.logout-button button {
+    background-color: #ff4c4c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.logout-button button:hover {
+    background-color: #ff1c1c;
+}
+
+/* Fin Bouton deconnexion*/
+
+
+/* Images des batiements*/
+.bank {
+    background-image: url("../images/bank.png");
+    /* Chemin vers l'image de la banque */
+    position: absolute;
+    bottom: 48.08%;
+    /* Ajustez selon vos besoins */
+    right: 46%;
+    /* Ajustez selon vos besoins */
+    width: 102px;
+    /* Taille de l'image */
+    height: 100px;
+    /* Taille de l'image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    /* Indique que la zone est cliquable */
+    z-index: 3;
+}
+
+.headquarter {
+    background-image: url("../images/headquarter.png");
+    position: absolute;
+    height: 7.809430255%;
+    left: 42.632612967%;
+    top: 48.47740668%;
+    width: 11.149312377%;
+    z-index: 2;
+    /* Assurez-vous que cette image est au-dessus */
+}
+
+.headquarter_background {
+    background-image: url("../images/headquarter_background.png");
+    position: absolute;
+    height: 11.935166994%;
+    left: 41.650294695%;
+    top: 48.379174853%;
+    width: 14.292730845%;
+    z-index: 1;
+    /* Assurez-vous que cette image est au-dessus */
+}
+
+.airport {
+    background-image: url("../images/airport.png");
+    position: absolute;
+    height: 14.685658153%;
+    left: 43.664047151%;
+    top: 49.656188605%;
+    width: 20.432220039%;
+    z-index: 2;
+}
+
+.airport_background {
+    background-image: url("../images/airport_background.png");
+    position: absolute;
+    height: 16.306483301%;
+    left: 43.418467583%;
+    top: 48.870333988%;
+    width: 27.455795678%;
+    z-index: 1;
+}
+
+.ammunition_factory {
+    background-image: url("../images/ammunition_factory.png");
+    position: absolute;
+    height: 5.304518664%;
+    left: 33.889980354%;
+    top: 44.106090373%;
+    width: 8.447937132%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.ammunition_factory_background {
+    background-image: url("../images/ammunition_factory_background.png");
+    position: absolute;
+    height: 6.827111984%;
+    left: 32.416502947%;
+    top: 43.467583497%;
+    width: 12.42632613%;
+    z-index: 1;
+}
+
+.refinery {
+    background-image: url("../images/refinery.png");
+    position: absolute;
+    height: 4.174852652%;
+    left: 31.925343811%;
+    top: 41.699410609%;
+    width: 5.550098232%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.refinery_background {
+    background-image: url("../images/refinery_background.png");
+    position: absolute;
+    height: 6.335952849%;
+    left: 30.550098232%;
+    top: 40.717092338%;
+    width: 10.314341847%;
+    z-index: 1;
+}
+
+.houses_1 {
+    background-image: url("../images/houses_1.png");
+    position: absolute;
+    height: 4.862475442%;
+    left: 40.569744597%;
+    top: 40.962671906%;
+    width: 8.055009823%;
+    z-index: 2;
+}
+
+.houses_background {
+    background-image: url("../images/houses_background.png");
+    position: absolute;
+    height: 6.827111984%;
+    left: 39.685658153%;
+    top: 40.275049116%;
+    width: 13.801571709%;
+    z-index: 1;
+}
+
+.university {
+    background-image: url("../images/university.png");
+    position: absolute;
+    height: 5.157170923%;
+    left: 44.646365422%;
+    top: 42.730844794%;
+    width: 7.907662083%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.university_background {
+    background-image: url("../images/university_background.png");
+    position: absolute;
+    height: 5.402750491%;
+    left: 43.762278978%;
+    top: 43.074656189%;
+    width: 8.939096267%;
+    z-index: 1;
+}
+
+.barracks {
+    background-image: url("../images/barracks.png");
+    position: absolute;
+    height: 7.31827112%;
+    left: 29.764243615%;
+    top: 55.746561886%;
+    width: 13.064833006%;
+    z-index: 2;
+}
+
+.barracks_background {
+    background-image: url("../images/barracks_background.png");
+    position: absolute;
+    height: 8.595284872%;
+    left: 27.357563851%;
+    top: 55.893909627%;
+    width: 16.404715128%;
+    z-index: 1;
+}
+
+.market {
+    background-image: url("../images/market.png");
+    position: absolute;
+    height: 4.469548134%;
+    left: 49.852652259%;
+    top: 40.569744597%;
+    width: 6.335952849%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.market_background {
+    background-image: url("../images/market_background.png");
+    position: absolute;
+    height: 5.353634578%;
+    left: 48.379174853%;
+    top: 40.078585462%;
+    width: 8.791748527%;
+    z-index: 1;
+}
+
+.trade {
+    background-image: url("../images/trade.png");
+    position: absolute;
+    height: 9.037328094%;
+    left: 51.031434185%;
+    top: 43.614931238%;
+    width: 9.823182711%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.trade_2 {
+    background-image: url("../images/trade_2.png");
+    position: absolute;
+    height: 8.300589391%;
+    left: 55.94302554%;
+    top: 40.520628684%;
+    width: 10.117878193%;
+    z-index: 2;
+}
+
+.trade_background {
+    background-image: url("../images/trade_background.png");
+    position: absolute;
+    height: 8.742632613%;
+    left: 52.259332024%;
+    top: 45.333988212%;
+    width: 9.724950884%;
+    z-index: 1;
+}
+
+.weapon_factory {
+    background-image: url("../images/weapon_factory.png");
+    position: absolute;
+    height: 7.072691552%;
+    left: 36.640471513%;
+    top: 52.013752456%;
+    width: 10.412573674%;
+    z-index: 2;
+}
+
+.weapon_factory_background {
+    background-image: url("../images/weapon_factory_background.png");
+    position: absolute;
+    height: 8.055009823%;
+    left: 36.444007859%;
+    top: 52.013752456%;
+    width: 13.163064833%;
+    z-index: 1;
+}
+
+.mine {
+    background-image: url("../images/mine.png");
+    position: absolute;
+    height: 3.831041257%;
+    left: 34.233791749%;
+    top: 38.212180747%;
+    width: 4.076620825%;
+    cursor: pointer;
+}
+
+.pentagon {
+    background-image: url("../images/pentagon.png");
+    position: absolute;
+    height: 4.862475442%;
+    left: 38.457760314%;
+    top: 46.512770138%;
+    width: 7.907662083%;
+    z-index: 2;
+}
+
+.pentagon_background {
+    background-image: url("../images/pentagon_background.png");
+    position: absolute;
+    height: 5.992141454%;
+    left: 36.886051081%;
+    top: 45.874263261%;
+    width: 10.952848723%;
+    z-index: 1;
+}
+
+/* Fin des images des batiements*/
+
+
+/* Bouton base page*/
+.bottom-panel {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    /* Couleur sombre pour correspondre au thème de guerre */
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 2px solid #555;
+    /* Bordure pour donner un effet de séparation */
+}
+
+.panel-link {
+    text-align: center;
+    display: inline-block;
+    padding: 1px;
+    transition: transform 0.2s ease;
+}
+
+.panel-link:hover {
+    transform: scale(1.1);
+    /* Agrandir légèrement l'icône au survol */
+}
+
+.panel-icon {
+    width: 60px;
+    height: 40px;
+    filter: grayscale(100%);
+    /* Appliquer un filtre pour donner un effet monochrome */
+    transition: filter 0.2s ease;
+}
+
+.panel-link:hover .panel-icon {
+    filter: grayscale(0%);
+    /* Annuler le filtre au survol pour faire ressortir l'icône */
+}
+
+.panel-link img {
+    display: block;
+    margin: 0 auto;
+}
+
+.panel-link:active {
+    transform: scale(0.9);
+    /* Réduire légèrement l'icône lors du clic */
+}
+
+/*Menu Batiement*/
+.menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(34, 34, 34, 0.9);
+    /* Fond sombre */
+    color: #fff;
+    /* Texte blanc */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 1000;
+    width: 400px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    /* Police de style militaire */
+    border: 5px solid #6b8e23;
+    /* Bordure vert olive */
+}
+
+.menu h3 {
+    /*background-color: rgba(182, 166, 166, 0.9);*/
+    border-radius: 10px;
+    border: 2px solid #6b8e23;
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* Majuscules */
+}
+
+.menu p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.menu input[type="number"] {
+    padding: 10px;
+    width: 120px;
+    margin-bottom: 25px;
+    border: 2px solid #6b8e23;
+    /* Bordure vert olive */
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: #eee;
+    /* Fond clair pour le champ */
+}
+
+.menu button {
+    padding: 12px 25px;
+    background-color: #6b8e23;
+    /* Vert olive */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.menu button:hover {
+    background-color: #556b2f;
+    /* Vert plus sombre au survol */
+    transform: scale(1.05);
+}
+
+.menu .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    /* Texte blanc */
+    cursor: pointer;
+}
+
+.menu .close-btn:hover {
+    color: #e74c3c;
+    /* Rouge au survol */
+}
+
+/* Notification*/
+
+.notification {
+    position: fixed;
+    bottom: 700px;
+    /* Ajuster la position en bas */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(190, 34, 34, 0.471);
+    /* Fond sombre */
+    color: #fff;
+    /* Texte blanc */
+    padding: 20px 30px;
+    /* Espacement intérieur */
+    border-radius: 10px;
+    /* Coins arrondis */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    /* Ombre */
+    z-index: 1000;
+    /* Pour s'assurer qu'il est au-dessus des autres éléments */
+    width: 400px;
+    /* Largeur de la notification */
+    text-align: center;
+    /* Centrer le texte */
+    font-family: 'Courier New', Courier, monospace;
+    /* Police de style militaire */
+    border: 2px solid #6b8e23;
+    /* Bordure vert olive */
+    display: none;
+    /* Cacher par défaut */
+    opacity: 0;
+    /* Opacité initiale */
+    transition: opacity 0.5s;
+    /* Transition pour l'opacité */
+    font-size: 20px;
+}
+
+.notification1 {
+    position: fixed;
+    bottom: 700px;
+    /* Ajuster la position en bas */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(34, 190, 47, 0.471);
+    /* Fond sombre */
+    color: #fff;
+    /* Texte blanc */
+    padding: 20px 30px;
+    /* Espacement intérieur */
+    border-radius: 10px;
+    /* Coins arrondis */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    /* Ombre */
+    z-index: 1000;
+    /* Pour s'assurer qu'il est au-dessus des autres éléments */
+    width: 400px;
+    /* Largeur de la notification */
+    text-align: center;
+    /* Centrer le texte */
+    font-family: 'Courier New', Courier, monospace;
+    /* Police de style militaire */
+    border: 2px solid #6b8e23;
+    /* Bordure vert olive */
+    display: none;
+    /* Cacher par défaut */
+    opacity: 0;
+    /* Opacité initiale */
+    transition: opacity 0.5s;
+    /* Transition pour l'opacité */
+    font-size: 20px;
+}
